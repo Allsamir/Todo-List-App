@@ -1,0 +1,33 @@
+<%- include('header'); -%> <!-- this ejs tag is for ejs template-->
+
+<div class="box" id="heading">
+
+          <h1><%= listTitle %></h1> <!--This ejs tag is for assigning values from our server.js-->
+
+</div>
+
+
+<div class="box">
+
+          <% newListItem.forEach(item => { %> <!-- This ejs tag is to write javascript code in ejs files-->
+                            
+          <form action="/delete" method="post">
+
+                    <div class="item">
+                              <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange="this.form.submit()">
+                              <p> <%= item.list %> </p>
+                    </div>
+
+                    <input type="hidden" name="listName" value="<%= listTitle %>"> <!--this hidden input is to check the route, from which route this data is coming-->
+          </form>
+          <%})%>
+
+                    <form class="item" action="/" method="post">
+                              
+                              <input type="text" name="newItem" autocomplete="off" placeholder="New Item">
+
+                              <button type="submit" name="list" value= <%= listTitle %>>+</button>
+          </form>
+</div>
+
+<%- include('footer'); -%>

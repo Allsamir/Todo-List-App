@@ -1,0 +1,25 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "This is a todo-list app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "todo-list"
+  ],
+  "author": "Allsamir",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "install": "^0.13.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1"
+  }
+}
